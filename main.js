@@ -1,9 +1,24 @@
 let boxes = [];
 boxes = document.getElementsByClassName('box');
-console.log(boxes);
+let nextLight;
+let gameOrder = [];
+let currentTurn = 0;
 
 
 window.onload = addColor();
+mainGame();
+
+function mainGame() {
+    nextLight = Math.floor(Math.random() * boxes.length);
+    gameOrder.push(nextLight);
+}
+
+function lightBoxes() {
+    for(let i = 0; i < gameOrder.length; i++)
+    {
+
+    }
+}
 
 /**
  * Adds color to each box.
@@ -11,7 +26,6 @@ window.onload = addColor();
 function addColor() 
 {
     shuffle(boxes);
-    console.log(boxes);
     for(let i=0; i < boxes.length; i++)
     {
         if (i == 0) {
