@@ -13,6 +13,22 @@ body {
     
 }
 
+.simon-says {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.upper-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.lower-row {
+    display: flex;
+    flex-direction: row;
+}
+
 .box {
     height: 256px;
     width: 256px;
