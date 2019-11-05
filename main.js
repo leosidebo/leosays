@@ -1,7 +1,8 @@
 let boxes = [];
 boxes = document.getElementsByClassName('box');
 let gameOrder = [];
-console.log(boxes);
+let currentLoop = 0;
+let gameLength = 1;
 
 
 window.onload = addColor();
@@ -34,23 +35,29 @@ function addColor()
 
 function mainGame() {
 
-    gameOrder.push(Math.floor(Math.random() * 4))
+    currentLoop = 0;
 
-    for(let i = 0; i < gameOrder.length; i++)
-    {
-        console.log('yee');
+    let mainLoop = setInterval(function() {
+        console.log('ree');
 
-        boxes[gameOrder[i]].classList.add('active');
+        if (currentLoop > 0) {
+            boxes[gameOrder[currentLoop - 1]].classList.remove('active');
+        }
 
-        let x;
-        x = setTimeout(removeActive(i), 2000);
-    }
+        gameOrder.push(Math.floor(Math.random() * 4))
+        boxes[gameOrder[currentLoop]].classList.add('active');
+        currentLoop++;
 
-}
+        if (currentLoop == gameLength) {
+            console.log('yee');
+            clearInterval(mainLoop);
+            gameLength++;
+        }
 
-function removeActive(i) {
-    console.log(i);
-    //boxes[gameOrder[i]].classList.remove('active');
+    }, 2000);
+
+    // for(let i = 0; i < gameOrder.length; i++) {}
+
 }
 
 /**
@@ -65,5 +72,4 @@ function shuffle(array) {
         array[j] = temp;
     }
 
-    console.log(array);
 }
