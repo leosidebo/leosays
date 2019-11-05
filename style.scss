@@ -1,9 +1,3 @@
-$red: red;
-$blue: blue;
-$green: green;
-$yellow: yellow;
-
-
 * {
     box-sizing: border-box;
 }
@@ -23,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .upper-row {
@@ -40,7 +35,6 @@ body {
     width: 256px;
 }
 
-
 .red {
     background-color: red;
 }
@@ -57,16 +51,58 @@ body {
     background-color: yellow;
 }
 
-@keyframes color-switcher {
+@keyframes color-switcher-red {
     0% {
-        
+        background-color: red;
     }
 
     50% {
-
+        background-color: scale-color(red, $lightness: 40%, $saturation: 50%, $alpha: 25%);
     }
 
     100% {
+        background-color: red;
+    }
+}
 
+@keyframes color-switcher-blue {
+    0% {
+        background-color: blue;
+    }
+
+    50% {
+        background-color: scale-color(blue, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes color-switcher-green {
+    0% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: scale-color(green, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes color-switcher-yellow {
+    0% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: scale-color(yellow, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: yellow;
     }
 }
