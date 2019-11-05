@@ -11,7 +11,6 @@ window.onload = addColor();
 function addColor() 
 {
     shuffle(boxes);
-    console.log(boxes);
     for(let i=0; i < boxes.length; i++)
     {
         if (i == 0) {
@@ -30,6 +29,10 @@ function addColor()
             boxes[i].classList.add('yellow');
         }
     }
+}
+
+function mainGame() {
+    console.log("yee");
 }
 
 /**

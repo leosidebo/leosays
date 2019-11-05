@@ -1,52 +1,55 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: white;
-    background-color: black;
-    margin: 0;
-    text-align: center;
+  color: white;
+  background-color: black;
+  margin: 0;
+  text-align: center;
 }
 
 .header {
-    
+  margin-bottom: 50px;
 }
 
 .simon-says {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upper-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .lower-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .box {
-    height: 256px;
-    width: 256px;
+  height: 256px;
+  width: 256px;
 }
 
-
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .blue {
-    background-color: blue;
+  background-color: blue;
 }
 
 .green {
-    background-color: green;
+  background-color: green;
 }
 
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
+
+@keyframes color-switcher {}
+
+/*# sourceMappingURL=style.css.map */
