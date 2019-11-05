@@ -5,19 +5,6 @@ console.log(boxes);
 
 
 window.onload = addColor();
-mainGame();
-
-function mainGame() {
-    nextLight = Math.floor(Math.random() * boxes.length);
-    gameOrder.push(nextLight);
-}
-
-function lightBoxes() {
-    for(let i = 0; i < gameOrder.length; i++)
-    {
-
-    }
-}
 
 /**
  * Adds color to each box.
