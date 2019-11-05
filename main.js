@@ -1,8 +1,7 @@
 let boxes = [];
 boxes = document.getElementsByClassName('box');
-let nextLight;
 let gameOrder = [];
-let currentTurn = 0;
+console.log(boxes);
 
 
 window.onload = addColor();
@@ -44,6 +43,27 @@ function addColor()
             boxes[i].classList.add('yellow');
         }
     }
+}
+
+function mainGame() {
+
+    gameOrder.push(Math.floor(Math.random() * 4))
+
+    for(let i = 0; i < gameOrder.length; i++)
+    {
+        console.log('yee');
+
+        boxes[gameOrder[i]].classList.add('active');
+
+        let x;
+        x = setTimeout(removeActive(i), 2000);
+    }
+
+}
+
+function removeActive(i) {
+    console.log(i);
+    //boxes[gameOrder[i]].classList.remove('active');
 }
 
 /**

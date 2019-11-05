@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: black;
+    margin: 0;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.simon-says {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.upper-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.lower-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    height: 256px;
+    width: 256px;
+}
+
+.red {
+    background-color: red;
+}
+
+.red.active {
+    animation: color-switcher-red 2s linear;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.blue.active {
+    animation: color-switcher-blue 2s linear;
+}
+
+.green {
+    background-color: green;
+}
+
+.green.active {
+    animation: color-switcher-green 2s linear;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.yellow.active {
+    animation: color-switcher-yellow 2s linear;
+}
+
+@keyframes color-switcher-red {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: scale-color(red, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes color-switcher-blue {
+    0% {
+        background-color: blue;
+    }
+
+    50% {
+        background-color: scale-color(blue, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: blue;
+    }
+}
+
+@keyframes color-switcher-green {
+    0% {
+        background-color: green;
+    }
+
+    50% {
+        background-color: scale-color(green, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: green;
+    }
+}
+
+@keyframes color-switcher-yellow {
+    0% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: scale-color(yellow, $lightness: 40%, $saturation: 50%, $alpha: 25%);
+    }
+
+    100% {
+        background-color: yellow;
+    }
+}

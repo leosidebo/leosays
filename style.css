@@ -1,53 +1,115 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    color: white;
-    background-color: black;
-    margin: 0;
-    text-align: center;
+  color: white;
+  background-color: black;
+  margin: 0;
+  text-align: center;
 }
 
 .header {
-    padding-top: 25px;
-    padding-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .simon-says {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
 }
 
 .upper-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .lower-row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .box {
-    height: 256px;
-    width: 256px;
+  height: 256px;
+  width: 256px;
 }
 
-
 .red {
-    background-color: red;
+  background-color: red;
+}
+
+.red.active {
+  animation: color-switcher-red 2s linear;
 }
 
 .blue {
-    background-color: blue;
+  background-color: blue;
+}
+
+.blue.active {
+  animation: color-switcher-blue 2s linear;
 }
 
 .green {
-    background-color: green;
+  background-color: green;
+}
+
+.green.active {
+  animation: color-switcher-green 2s linear;
 }
 
 .yellow {
-    background-color: yellow;
+  background-color: yellow;
 }
+
+.yellow.active {
+  animation: color-switcher-yellow 2s linear;
+}
+
+@keyframes color-switcher-red {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: #ff6666;
+  }
+  100% {
+    background-color: red;
+  }
+}
+@keyframes color-switcher-blue {
+  0% {
+    background-color: blue;
+  }
+  50% {
+    background-color: #6666ff;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+@keyframes color-switcher-green {
+  0% {
+    background-color: green;
+  }
+  50% {
+    background-color: #1aff1a;
+  }
+  100% {
+    background-color: green;
+  }
+}
+@keyframes color-switcher-yellow {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: #ffff66;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
