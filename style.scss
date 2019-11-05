@@ -39,16 +39,32 @@ body {
     background-color: red;
 }
 
+.red.active {
+    animation: color-switcher-red 2s linear;
+}
+
 .blue {
     background-color: blue;
+}
+
+.blue.active {
+    animation: color-switcher-blue 2s linear;
 }
 
 .green {
     background-color: green;
 }
 
+.green.active {
+    animation: color-switcher-green 2s linear;
+}
+
 .yellow {
     background-color: yellow;
+}
+
+.yellow.active {
+    animation: color-switcher-yellow 2s linear;
 }
 
 @keyframes color-switcher-red {

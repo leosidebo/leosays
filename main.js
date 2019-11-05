@@ -40,22 +40,17 @@ function mainGame() {
     {
         console.log('yee');
 
-        if (gameOrder[i] == 0) {
-            boxes[0].style = 'animation: color-switcher-red 2s linear';
-        }
+        boxes[gameOrder[i]].classList.add('active');
 
-        if (gameOrder[i] == 1) {
-            boxes[1].style = 'animation: color-switcher-blue 2s linear';
-        }
-
-        if (gameOrder[i] == 2) {
-            boxes[2].style = 'animation: color-switcher-green 2s linear';
-        }
-
-        if (gameOrder[i] == 3) {
-            boxes[3].style = 'animation: color-switcher-yellow 2s linear';
-        }
+        let x;
+        x = setTimeout(removeActive(i), 2000);
     }
+
+}
+
+function removeActive(i) {
+    console.log(i);
+    //boxes[gameOrder[i]].classList.remove('active');
 }
 
 /**
