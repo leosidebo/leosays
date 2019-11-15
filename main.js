@@ -1,16 +1,16 @@
-let boxes = [];
+var boxes = [];
 boxes = document.getElementsByClassName("box");
 let gameOrder = [];
-let currentLoop = 0;
+let currentLoopIndex = 0;
 let gameLength = 1;
-
+let gameInProgress = false;
 window.onload = addColor();
 
 /**
  * Adds color to each box.
  */
 function addColor() {
-  shuffle(boxes);
+  // shuffle(boxes);
   for (let i = 0; i < boxes.length; i++) {
     if (i == 0) {
       boxes[i].classList.add("red");
@@ -30,28 +30,34 @@ function addColor() {
   }
 }
 
+function onClickRed() {
+  if (!gameInProgress) {
+    boxes[0].classList.remove("active");
+    console.log(boxes[0]);
+    boxes[0].classList.add("active");
+  }
+}
+
 function mainGame() {
-  currentLoop = 0;
+  gameInProgress = true;
+  currentLoopIndex = 0;
 
   let mainLoop = setInterval(function() {
-    console.log("ree");
-
-    if (gameLength > 1 && currentLoop == 0) {
-      boxes[gameOrder[currentLoop]].classList.remove("active");
-    } else if (gameLength > 1) {
-      boxes[gameOrder[currentLoop - 1]].classList.remove("active");
+    var x = document.getElementsByClassName("active");
+    for (let i = 0; i < x.length; i++) {
+      x[i].classList.remove("active");
     }
 
     gameOrder.push(Math.floor(Math.random() * 4));
-    console.log(boxes[gameOrder[currentLoop]].classList);
-    boxes[gameOrder[currentLoop]].classList.add("active");
-    console.log(boxes[gameOrder[currentLoop]]);
-    currentLoop++;
+    console.log(boxes[gameOrder[currentLoopIndex]].classList);
+    boxes[gameOrder[currentLoopIndex]].classList.add("active");
+    console.log(boxes[gameOrder[currentLoopIndex]]);
+    currentLoopIndex++;
 
-    if (currentLoop == gameLength) {
-      console.log("yee");
+    if (currentLoopIndex == gameLength) {
       clearInterval(mainLoop);
       gameLength++;
+      gameInProgress = false;
     }
   }, 2000);
 

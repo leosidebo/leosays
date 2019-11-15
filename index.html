@@ -1,37 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet">
-</head>
-<body>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="header">
-        <h1>Leo Says</h1>
-        <p>Click the colored squares in the same order that they light up!</p>
-        <button type="button" onclick="mainGame();">Play!</button>
+      <h1>Leo Says</h1>
+      <p>Click the colored squares in the same order that they light up!</p>
+      <button type="button" onclick="mainGame();">Play!</button>
     </div>
 
     <div class="simon-says">
-        <div class="upper-row">
-            <div id="yee" class="box">
-            </div>
+      <div class="upper-row">
+        <div id="yee" class="box" onclick="onClickRed()"></div>
 
-            <div id="ree" class="box">
-            </div>
-        </div>
+        <div id="ree" class="box"></div>
+      </div>
 
-        <div class="lower-row">
-            <div id="nee" class="box">
-            </div>
+      <div class="lower-row">
+        <div id="nee" class="box"></div>
 
-            <div id="cree" class="box">
-            </div>
-        </div>
-
+        <div id="cree" class="box"></div>
+      </div>
     </div>
 
     <script src="main.js"></script>
-</body>
+  </body>
 </html>
